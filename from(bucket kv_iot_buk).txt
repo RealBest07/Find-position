@@ -1,0 +1,3 @@
+from(bucket: "kv_iot_buk")
+    |> range(start: -30d)
+    |> pivot(rowKey: ["_time"], columnKey: ["_field"], valueColumn: "_value")
